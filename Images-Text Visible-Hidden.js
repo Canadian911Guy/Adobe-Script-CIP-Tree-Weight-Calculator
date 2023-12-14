@@ -208,7 +208,7 @@ function updateVisibilityBasedOnP() {
             this.getField("Image38_af_image").display = display.visible;
 			textToDisplay = "Pine (Western White)";
             break;
-        case "59.6":
+        case "59.6 Pine":
             this.getField("Text39").display = display.visible;
             this.getField("Image41_af_image").display = display.visible;
             this.getField("Image44_af_image").display = display.visible;
@@ -268,6 +268,43 @@ function updateVisibilityBasedOnP() {
             this.getField("Image80_af_image").display = display.visible;
 			textToDisplay = "Yew (Western / Pacific)";
             break;			
+		case "68.5 Apple":
+			textToDisplay = "Apple";
+            break;
+		case "59.6 Ash":
+			textToDisplay = "Ash (Black)";
+            break;
+		case "70.8":
+			textToDisplay = "Ash (White)";
+            break;
+		case "52.8 BaldCypress":
+			textToDisplay = "BaldCypress";
+            break;
+		case "52.8 Cherry":
+			textToDisplay = "Cherry (Black)";
+            break;
+		case "44.9 Chestnut":
+			textToDisplay = "Chestnut (American)";
+            break;
+		case "66.3":
+			textToDisplay = "Elm";
+            break;
+		case "74.7":
+			textToDisplay = "Hickory";
+            break;
+		case "46.1 Redwood-Old":
+			textToDisplay = "Redwood (Old Growth)";
+            break;
+		case "41.6 Redwood-New":
+			textToDisplay = "Redwood (New Growth)";
+            break;
+		case "60.7":
+			textToDisplay = "Sycamore (American)";
+            break;
+		case "33.5":
+			textToDisplay = "Walnut (Black)";
+            break;
+		
         // Add more cases as needed for each unique value in "P_Full"
         // ...
         default:

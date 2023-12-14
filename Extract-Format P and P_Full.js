@@ -1,27 +1,20 @@
-var speciesValue = this.getField("Species").value;
+// console.println("Script triggered for Species-2");  // Debug line
 
-// Convert speciesValue to a string and trim
-var speciesValueString = speciesValue.toString().trim();
+var speciesValue = this.getField("Species") ? this.getField("Species").value : "";
+var speciesValue2 = this.getField("Species-2") ? this.getField("Species-2").value : "";
 
-// Check and format "45", "73", and "85" explicitly
-if (speciesValueString === "45" || speciesValueString === "73" || speciesValueString === "85.0"){
-    speciesValueString += ".0";
-} else if (!isNaN(parseFloat(speciesValueString)) && !speciesValueString.match(/[a-zA-Z]/)) {
-    // Format other numeric values to one decimal place
-    speciesValueString = parseFloat(speciesValueString).toFixed(1);
-}
+// Ensure species values are strings
+speciesValue = String(speciesValue).trim();
+speciesValue2 = String(speciesValue2).trim();
 
-// Set the formatted species value to "P_Full" and "Text500" fields
-this.getField("P_Full").value = speciesValueString;
+// Select the species value to use
+var selectedSpeciesValue = (speciesValue2 && speciesValue2 !== "Choose Tree Species") ? speciesValue2 : ((speciesValue && speciesValue !== "Choose Tree Species") ? speciesValue : "");
 
-// For the "P" field, update only with numeric values
-// Extract only the numeric part if the value is alphanumeric
-var numericPartMatch = speciesValueString.match(/(\d+(\.\d+)?)/);
-if (numericPartMatch) {
-    this.getField("P").value = parseFloat(numericPartMatch[0]).toFixed(1);
-} else {
-    this.getField("P").value = "";
-}
+// Set the formatted species value to "P_Full"
+this.getField("P_Full").value = selectedSpeciesValue;
 
-// Debugging
-// console.println("Set 'P_Full' to: " + speciesValueString);
+// Extract only the numeric part for the "P" field if the value is alphanumeric
+var numericPartMatch = selectedSpeciesValue.match(/(\d+(\.\d+)?)/);
+this.getField("P").value = numericPartMatch ? parseFloat(numericPartMatch[0]).toFixed(1) : "";
+
+// console.println("P_Full set to: " + selectedSpeciesValue);  // Debug line

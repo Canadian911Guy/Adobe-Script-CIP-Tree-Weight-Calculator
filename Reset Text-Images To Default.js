@@ -1,5 +1,5 @@
  // List of field names to clear
-var fieldsToClear = ["P", "L", "ds", "dl", "dm", "V", "Species", "Text500"]; // Replace with your actual field names
+var fieldsToClear = ["P", "L", "ds", "dl", "dm", "V", "Species", "Species-2", "Text500"]; // Replace with your actual field names
 
 // Loop through each field and clear its value
 for (var i = 0; i < fieldsToClear.length; i++) {
@@ -18,7 +18,7 @@ for (var i = 0; i < fieldsToClear.length; i++) {
 }
 
 // Set Text and Images to hidden
-			      this.getField("Text5").display = display.hidden;
+			this.getField("Text5").display = display.hidden;
             this.getField("Image5_af_image").display = display.hidden;
             this.getField("Image6_af_image").display = display.hidden;
             this.getField("Text7").display = display.hidden;
@@ -134,7 +134,7 @@ for (var i = 0; i < fieldsToClear.length; i++) {
             this.getField("Text78").display = display.hidden;
             this.getField("Image79_af_image").display = display.hidden;
             this.getField("Image80_af_image").display = display.hidden;
-			      this.getField("Text3").display = display.hidden;
+			this.getField("Text3").display = display.hidden;
             this.getField("Image75_af_image").display = display.hidden;
             this.getField("Image78_af_image").display = display.hidden;
             this.getField("Text79").display = display.hidden;
