@@ -140,3 +140,6 @@ for (var i = 0; i < fieldsToClear.length; i++) {
             this.getField("Text79").display = display.hidden;
             this.getField("Image81_af_image").display = display.hidden;
             this.getField("Image82_af_image").display = display.hidden;
+            this.getField("Text8").display = display.hidden;
+            this.getField("Image83_af_image").display = display.hidden;
+            this.getField("Image84_af_image").display = display.hidden;
