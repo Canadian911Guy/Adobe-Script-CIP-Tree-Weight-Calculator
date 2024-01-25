@@ -18,3 +18,5 @@ var numericPartMatch = selectedSpeciesValue.match(/(\d+(\.\d+)?)/);
 this.getField("P").value = numericPartMatch ? parseFloat(numericPartMatch[0]).toFixed(1) : "";
 
 // console.println("P_Full set to: " + selectedSpeciesValue);  // Debug line
+
+updateVisibilityBasedOnP();
