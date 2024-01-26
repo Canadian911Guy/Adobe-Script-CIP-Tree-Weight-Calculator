@@ -17,6 +17,9 @@ this.getField("P_Full").value = selectedSpeciesValue;
 var numericPartMatch = selectedSpeciesValue.match(/(\d+(\.\d+)?)/);
 this.getField("P").value = numericPartMatch ? parseFloat(numericPartMatch[0]).toFixed(1) : "";
 
+// Resetting the radio button "Group2"
+this.getField("Group2").value = "Off";  // Sets the radio button group to its unselected state
+
 // console.println("P_Full set to: " + selectedSpeciesValue);  // Debug line
 
 updateVisibilityBasedOnP();
